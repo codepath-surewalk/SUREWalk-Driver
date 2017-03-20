@@ -12,6 +12,8 @@
 		1C0658B81E80907E009758AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C0658B61E80907E009758AD /* Main.storyboard */; };
 		1C0658BA1E80907E009758AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C0658B91E80907E009758AD /* Assets.xcassets */; };
 		1C0658BD1E80907E009758AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C0658BB1E80907E009758AD /* LaunchScreen.storyboard */; };
+		1C0658C51E809BA4009758AD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0658C41E809BA4009758AD /* LoginViewController.swift */; };
+		275EA9530337615D2C62E2FD /* Pods_SureWalk_Driver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C74780CEF7D46B65BED585 /* Pods_SureWalk_Driver.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		1C0658B91E80907E009758AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C0658BC1E80907E009758AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C0658BE1E80907E009758AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C0658C41E809BA4009758AD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		402BA45375E4A906D98219EB /* Pods-SureWalk Driver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SureWalk Driver.release.xcconfig"; path = "Pods/Target Support Files/Pods-SureWalk Driver/Pods-SureWalk Driver.release.xcconfig"; sourceTree = "<group>"; };
+		89C74780CEF7D46B65BED585 /* Pods_SureWalk_Driver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SureWalk_Driver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5BEF0494DD531F6545D0E48 /* Pods-SureWalk Driver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SureWalk Driver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SureWalk Driver/Pods-SureWalk Driver.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275EA9530337615D2C62E2FD /* Pods_SureWalk_Driver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				1C0658B11E80907E009758AD /* SureWalk Driver */,
 				1C0658B01E80907E009758AD /* Products */,
+				842668BFFD0D10EF6764C3CC /* Pods */,
+				5A834A4CE643F6348F18800B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				1C0658B21E80907E009758AD /* AppDelegate.swift */,
+				1C0658C41E809BA4009758AD /* LoginViewController.swift */,
 				1C0658B41E80907E009758AD /* ViewController.swift */,
 				1C0658B61E80907E009758AD /* Main.storyboard */,
 				1C0658B91E80907E009758AD /* Assets.xcassets */,
@@ -64,6 +74,23 @@
 			path = "SureWalk Driver";
 			sourceTree = "<group>";
 		};
+		5A834A4CE643F6348F18800B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89C74780CEF7D46B65BED585 /* Pods_SureWalk_Driver.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		842668BFFD0D10EF6764C3CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5BEF0494DD531F6545D0E48 /* Pods-SureWalk Driver.debug.xcconfig */,
+				402BA45375E4A906D98219EB /* Pods-SureWalk Driver.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C0658C11E80907E009758AD /* Build configuration list for PBXNativeTarget "SureWalk Driver" */;
 			buildPhases = (
+				07842D2CFA438A1B5291C9F3 /* [CP] Check Pods Manifest.lock */,
 				1C0658AB1E80907E009758AD /* Sources */,
 				1C0658AC1E80907E009758AD /* Frameworks */,
 				1C0658AD1E80907E009758AD /* Resources */,
+				4AB7D41C9524E695CBC2CF18 /* [CP] Embed Pods Frameworks */,
+				3249331DF2104A2679829336 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,11 +161,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07842D2CFA438A1B5291C9F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3249331DF2104A2679829336 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SureWalk Driver/Pods-SureWalk Driver-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AB7D41C9524E695CBC2CF18 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SureWalk Driver/Pods-SureWalk Driver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1C0658AB1E80907E009758AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C0658C51E809BA4009758AD /* LoginViewController.swift in Sources */,
 				1C0658B51E80907E009758AD /* ViewController.swift in Sources */,
 				1C0658B31E80907E009758AD /* AppDelegate.swift in Sources */,
 			);
@@ -256,6 +335,7 @@
 		};
 		1C0658C21E80907E009758AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5BEF0494DD531F6545D0E48 /* Pods-SureWalk Driver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "SureWalk Driver/Info.plist";
@@ -268,6 +348,7 @@
 		};
 		1C0658C31E80907E009758AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 402BA45375E4A906D98219EB /* Pods-SureWalk Driver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "SureWalk Driver/Info.plist";
@@ -297,6 +378,7 @@
 				1C0658C31E80907E009758AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
