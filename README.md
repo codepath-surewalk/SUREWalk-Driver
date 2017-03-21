@@ -20,7 +20,7 @@ The following **optional** features are implemented:
 ## Wireframe
 
 Here's a drawing of the current wireframe:
-![alt tag](https://raw.githubusercontent.com/codepath-surewalk/SUREWalk-Driver/master/Wireframe/Wireframe.png)
+![alt tag](https://raw.githubusercontent.com/codepath-surewalk/SUREWalk-Driver/master/Wireframe/Wireframe.jpg)
 
 # Notes
 
