@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
             if user != nil
             {
                 print("User log in successful")
-                //self.performSegue(withIdentifier: "loginsegue", sender: nil)
+                self.performSegue(withIdentifier: "loginsegue", sender: nil)
             }
             else
             {
@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
             if success
             {
                 print("User sign up successful")
-                //self.performSegue(withIdentifier: "loginsegue", sender: nil)
+                self.performSegue(withIdentifier: "loginsegue", sender: nil)
             }
             else
             {
