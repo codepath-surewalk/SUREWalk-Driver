@@ -10,11 +10,17 @@ The following **required** functionality is completed:
   - [ ] Driver can see student's name, location, and destination
 - [ ] Driver can accept a ride request
   - [ ] Send notification that ride has been accepted
+- [ ] Driver can see location and destination as annotations on a map
   
 The following **optional** features are implemented:
 
+- [ ] Driver can add full profile, including photo
 - [ ] Driver is presented with route to student
+  - [ ] Route is displayed in-app
+  - [ ] Route is displayed in Apple Maps
 - [ ] Driver is given route to destination
+  - [ ] Route is displayed in-app
+  - [ ] Route is displayed in Apple Maps
 - [ ] Driver broadcasts his location
 
 ## Wireframe
