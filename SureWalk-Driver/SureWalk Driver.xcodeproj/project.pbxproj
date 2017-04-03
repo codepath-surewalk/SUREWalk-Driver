@@ -16,6 +16,7 @@
 		1C1CA9BC1E89D968006D06F8 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1CA9BB1E89D968006D06F8 /* PostViewController.swift */; };
 		1C1CA9C01E8C421E006D06F8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1CA9BF1E8C421E006D06F8 /* MapKit.framework */; };
 		275EA9530337615D2C62E2FD /* Pods_SureWalk_Driver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C74780CEF7D46B65BED585 /* Pods_SureWalk_Driver.framework */; };
+		3B89036C1E9303C900812C86 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B89036B1E9303C900812C86 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		1C0658C41E809BA4009758AD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1C1CA9BB1E89D968006D06F8 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		1C1CA9BF1E8C421E006D06F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3B89036B1E9303C900812C86 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		402BA45375E4A906D98219EB /* Pods-SureWalk Driver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SureWalk Driver.release.xcconfig"; path = "Pods/Target Support Files/Pods-SureWalk Driver/Pods-SureWalk Driver.release.xcconfig"; sourceTree = "<group>"; };
 		89C74780CEF7D46B65BED585 /* Pods_SureWalk_Driver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SureWalk_Driver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5BEF0494DD531F6545D0E48 /* Pods-SureWalk Driver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SureWalk Driver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SureWalk Driver/Pods-SureWalk Driver.debug.xcconfig"; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		1C0658B11E80907E009758AD /* SureWalk Driver */ = {
 			isa = PBXGroup;
 			children = (
+				3B89036B1E9303C900812C86 /* API.swift */,
 				1C0658B21E80907E009758AD /* AppDelegate.swift */,
 				1C0658C41E809BA4009758AD /* LoginViewController.swift */,
 				1C0658B41E80907E009758AD /* ViewController.swift */,
@@ -230,6 +233,7 @@
 				1C0658C51E809BA4009758AD /* LoginViewController.swift in Sources */,
 				1C0658B51E80907E009758AD /* ViewController.swift in Sources */,
 				1C0658B31E80907E009758AD /* AppDelegate.swift in Sources */,
+				3B89036C1E9303C900812C86 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
