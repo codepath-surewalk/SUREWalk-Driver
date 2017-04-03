@@ -15,7 +15,7 @@ class API: NSObject {
         // construct PFQuery
         let query = PFQuery(className: "Request")
         query.order(byDescending: "createdAt")
-        query.includeKey("author")
+        query.includeKey("rider")
         query.limit = items
         
         // fetch data asynchronously
