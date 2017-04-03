@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C04478F1E930B4A00D64494 /* PostCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C04478E1E930B4A00D64494 /* PostCellTableViewCell.swift */; };
 		1C0658B31E80907E009758AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0658B21E80907E009758AD /* AppDelegate.swift */; };
 		1C0658B51E80907E009758AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0658B41E80907E009758AD /* ViewController.swift */; };
 		1C0658B81E80907E009758AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C0658B61E80907E009758AD /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C04478E1E930B4A00D64494 /* PostCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCellTableViewCell.swift; sourceTree = "<group>"; };
 		1C0658AF1E80907E009758AD /* SureWalk Driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SureWalk Driver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C0658B21E80907E009758AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C0658B41E80907E009758AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				1C0658C41E809BA4009758AD /* LoginViewController.swift */,
 				1C0658B41E80907E009758AD /* ViewController.swift */,
 				1C0658B61E80907E009758AD /* Main.storyboard */,
+				1C04478E1E930B4A00D64494 /* PostCellTableViewCell.swift */,
 				1C1CA9BB1E89D968006D06F8 /* PostViewController.swift */,
 				1C0658B91E80907E009758AD /* Assets.xcassets */,
 				1C0658BB1E80907E009758AD /* LaunchScreen.storyboard */,
@@ -232,6 +235,7 @@
 				1C1CA9BC1E89D968006D06F8 /* PostViewController.swift in Sources */,
 				1C0658C51E809BA4009758AD /* LoginViewController.swift in Sources */,
 				1C0658B51E80907E009758AD /* ViewController.swift in Sources */,
+				1C04478F1E930B4A00D64494 /* PostCellTableViewCell.swift in Sources */,
 				1C0658B31E80907E009758AD /* AppDelegate.swift in Sources */,
 				3B89036C1E9303C900812C86 /* API.swift in Sources */,
 			);
