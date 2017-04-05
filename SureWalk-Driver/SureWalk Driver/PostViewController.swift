@@ -92,16 +92,18 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let postDetailViewController = segue.destination as! PostDetailViewController
+        let indexPath = tableView.indexPath(for: sender as! UITableViewCell)
+        
+        let request = requests?[indexPath!.row]
+        
+        let rider = request?["rider"] as! PFUser
+        let firstName = rider["firstName"] as? String
+        let lastName = rider["lastName"] as? String
+        
+        
     }
-    */
 
 }
