@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E191a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainNavController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="SureWalk_Driver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginNavController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="SureWalk_Driver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -74,7 +74,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="jEG-tY-f0p" id="T66-hw-r9e"/>
                         <outlet property="usernameTextField" destination="fYw-4Q-ZgO" id="TYj-HU-bvB"/>
-                        <segue destination="ogP-TH-luZ" kind="show" identifier="loginsegue" id="eAe-Ht-3l4"/>
+                        <segue destination="ogP-TH-luZ" kind="show" identifier="loginSegue" id="eAe-Ht-3l4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -136,7 +136,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="th0-B9-317" id="a7A-9q-5Ia"/>
-                                            <segue destination="7kH-wk-Dgt" kind="show" id="Nna-2L-Ged"/>
+                                            <segue destination="7kH-wk-Dgt" kind="show" identifier="postDetailViewSegue" id="Nna-2L-Ged"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -154,7 +154,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="aTM-2o-uMu">
                             <connections>
                                 <action selector="onLogout:" destination="qrT-ea-YXI" id="hax-oz-Gfp"/>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="lE6-KY-qwK"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutSegue" id="lE6-KY-qwK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -217,7 +217,7 @@
         <!--Navigation Controller-->
         <scene sceneID="6kL-rM-XhZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ogP-TH-luZ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavController" automaticallyAdjustsScrollViewInsets="NO" id="ogP-TH-luZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0lq-Tc-cBk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -230,7 +230,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ILK-kr-mTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1767.2" y="123.68815592203899"/>
+            <point key="canvasLocation" x="1854" y="124"/>
         </scene>
     </scenes>
 </document>

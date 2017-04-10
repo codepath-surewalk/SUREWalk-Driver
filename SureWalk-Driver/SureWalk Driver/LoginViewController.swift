@@ -24,36 +24,39 @@ class LoginViewController: UIViewController {
     }
     @IBAction func onSignIn(_ sender: Any)
     {
+        // TODO: add input validation like in onSignUp
         PFUser.logInWithUsername(inBackground: usernameTextField.text!, password: passwordTextField.text!) { (user: PFUser?, error: Error?) in
             if user != nil
             {
                 print("User log in successful")
-                self.performSegue(withIdentifier: "loginsegue", sender: nil)
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
             else
             {
-                print("Error: \(error?.localizedDescription)")
+                print("Error: \(String(describing: error?.localizedDescription))")
             }
         }
     }
     @IBAction func onSignUp(_ sender: Any)
     {
-        let newUser = PFUser()
-        
-        newUser.username = usernameTextField.text
-        newUser.password = passwordTextField.text
-        newUser["type"] = "driver"
-        
-        newUser.signUpInBackground { (success: Bool, error: Error?) in
-            if success
-            {
-                print("User sign up successful")
-                self.performSegue(withIdentifier: "loginsegue", sender: nil)
+        if usernameTextField.hasText && passwordTextField.hasText {
+            if let username = usernameTextField.text, let password = passwordTextField.text {
+                let newUser = PFUser()
+                newUser.username = username
+                newUser.password = password
+                newUser["type"] = "driver"
+                // TODO: need info such as phone number, first/last name
+                newUser.signUpInBackground { (success: Bool, error: Error?) in
+                    if success {
+                        print("success signing up")
+                        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                    } else {
+                        print("\(String(describing: error?.localizedDescription))")
+                    }
+                }
             }
-            else
-            {
-                print("Error: \(error?.localizedDescription)")
-            }
+        } else {
+            print("missing username/password")
         }
     }
     

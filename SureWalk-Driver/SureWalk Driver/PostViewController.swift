@@ -84,24 +84,31 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     @IBAction func onLogout(_ sender: Any)
     {
-        print("Logging out current user")
         PFUser.logOutInBackground { (error: Error?) in
-            if error != nil
-            {
-                print("Error: \(error?.localizedDescription)")
+            if let error = error {
+                print("\(error.localizedDescription)")
+            } else {
+                print("logging out")
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "UserLogout"), object: nil)
             }
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        let postDetailViewController = segue.destination as! PostDetailViewController
-        let indexPath = tableView.indexPath(for: sender as! UITableViewCell)
-        
-        let request = requests?[indexPath!.row]
-        
-        let rider = request?["rider"] as! PFUser
-        let firstName = rider["firstName"] as? String
-        let lastName = rider["lastName"] as? String
+        print("hi i'm runnning")
+        if segue.identifier == "postDetailViewSegue" {
+            let postDetailViewController = segue.destination as! PostDetailViewController
+            let indexPath = tableView.indexPath(for: sender as! UITableViewCell)
+            
+            let request = requests?[indexPath!.row]
+            
+            let rider = request?["rider"] as! PFUser
+            let firstName = rider["firstName"] as? String
+            let lastName = rider["lastName"] as? String
+
+        } else if segue.identifier == "logoutSegue" {
+            print("derp")
+        }
         
         
     }
