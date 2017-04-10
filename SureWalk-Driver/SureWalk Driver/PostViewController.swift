@@ -63,24 +63,6 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         }) { (error: Error) in
             print(error.localizedDescription)
         }
-        /*
-        let query = PFQuery(className: "Request")
-        query.order(byDescending: "createdAt")
-        //  query.includeKey("author")
-        //query.limit = 20
-        
-        query.findObjectsInBackground { (requests: [PFObject]?, error: Error?) -> Void in
-            if let requests = requests
-            {
-                self.requests = requests
-                self.tableView.reloadData()
-            }
-            else
-            {
-                print(error!.localizedDescription)
-            }
- */
-        
     }
     @IBAction func onLogout(_ sender: Any)
     {
@@ -92,18 +74,33 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let postDetailViewController = segue.destination as! PostDetailViewController
         let indexPath = tableView.indexPath(for: sender as! UITableViewCell)
         
         let request = requests?[indexPath!.row]
-        
+
+        //set name
         let rider = request?["rider"] as! PFUser
         let firstName = rider["firstName"] as? String
         let lastName = rider["lastName"] as? String
-        
-        
+        let name = firstName! + " " + lastName!
+        postDetailViewController.name = name
+        //set rider location
+        let locationLongitude = request?["locationLongitude"] as! Double
+        let locationLatitude = request?["locationLatitude"] as! Double
+        postDetailViewController.locationLatitude = locationLatitude
+        postDetailViewController.locationLongitude = locationLongitude
+        //set destination location
+        let destinationLongitude = request?["destinationLongitude"] as! Double
+        let destinationLatitude = request?["destinationLatitude"] as! Double
+        postDetailViewController.destinationLatitude = destinationLatitude
+        postDetailViewController.destinationLongitude = destinationLongitude
+        //send phone number
+        let phoneNumber = rider["phone"] as? Int
+        postDetailViewController.phoneNumber = phoneNumber
     }
 
 }
