@@ -109,6 +109,12 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
             let destinationLatitude = request?["destinationLatitude"] as! Double
             postDetailViewController.destinationLatitude = destinationLatitude
             postDetailViewController.destinationLongitude = destinationLongitude
+            //set date
+            let date = request?["date"] as? String
+            postDetailViewController.dateRequested = date
+            //set time
+            let time = request?["time"] as? String
+            postDetailViewController.timeRequested = time
             //send phone number
             let phoneNumber = rider["phone"] as? Int
             postDetailViewController.phoneNumber = phoneNumber

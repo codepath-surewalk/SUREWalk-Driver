@@ -31,7 +31,10 @@ class PostDetailViewController: UIViewController, MFMessageComposeViewController
         super.viewDidLoad()
         //Set Name of Rider
         nameLabelB.text = name
-        print(phoneNumber)
+        //Set Date Requested
+        dateLabel.text = dateRequested
+        //Set Time Requested
+        timeLabel.text = timeRequested
         //Set Point for Rider Location
         let spanA:MKCoordinateSpan = MKCoordinateSpanMake(0.1, 0.1)
         let locationA:CLLocationCoordinate2D = CLLocationCoordinate2DMake(locationLatitude, locationLongitude)
@@ -41,8 +44,6 @@ class PostDetailViewController: UIViewController, MFMessageComposeViewController
         annotationA.coordinate = locationA
         annotationA.title = "Rider Location"
         map.addAnnotation(annotationA)
-        
-        
         //Set Point for Rider Destination
         let spanB:MKCoordinateSpan = MKCoordinateSpanMake(0.1, 0.1)
         let locationB:CLLocationCoordinate2D = CLLocationCoordinate2DMake(destinationLatitude, destinationLongitude)
