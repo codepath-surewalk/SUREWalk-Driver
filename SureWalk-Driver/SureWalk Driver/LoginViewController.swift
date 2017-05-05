@@ -22,6 +22,10 @@ class LoginViewController: UIViewController {
     {
         super.didReceiveMemoryWarning()
     }
+    @IBAction func onTap(_ sender: Any)
+    {
+        view.endEditing(true)
+    }
     @IBAction func onSignIn(_ sender: Any)
     {
         // TODO: add input validation like in onSignUp

@@ -80,6 +80,7 @@ class PostDetailViewController: UIViewController, MFMessageComposeViewController
         
         return annotationView
     }
+    
     @IBAction func onAccept(_ sender: AnyObject)
     {
         let msgVC = MFMessageComposeViewController()
@@ -87,10 +88,14 @@ class PostDetailViewController: UIViewController, MFMessageComposeViewController
         msgVC.recipients = [String(phoneNumber)]
         msgVC.messageComposeDelegate = self
         
-        //self.presentationController(msgVC, animated: true, completion: nil )
+        self.present(msgVC, animated: true) { 
+            
+        }
     }
+    
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult)
     {
+        
     }
 
     /*
