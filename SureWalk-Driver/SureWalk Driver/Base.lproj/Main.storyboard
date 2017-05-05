@@ -69,6 +69,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99956661459999996" green="0.65381437539999998" blue="0.20797178150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="add-Zv-udZ" appends="YES" id="HVr-6D-dNb"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="X5A-6h-ApH"/>
                     <connections>
@@ -78,6 +82,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="add-Zv-udZ"/>
             </objects>
             <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
         </scene>
